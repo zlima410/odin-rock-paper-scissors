@@ -1,6 +1,8 @@
 function getComputerChoice() {
+    //find a random number between 1 and 3
     let choice = Math.floor(Math.random() * 3) + 1;
 
+    //return the choice based on the random number
     switch (choice) {
         case 1: 
             return "Rock";
@@ -17,12 +19,12 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
+    //check for all possible outcomes and return the result of both the player and computer selections
     if (playerSelection.toLowerCase() == "rock" && computerSelection == "Scissors") {
         return "You Win! Rock beats Scissors";
     }
     else if (playerSelection.toLowerCase() == "rock" && computerSelection == "Paper") {
         return "You Lose! Paper beats Rock";
-
     }
     else if (playerSelection.toLowerCase() == "paper" && computerSelection == "Rock") {
         return "You Win! Paper beats Rock";
@@ -46,6 +48,7 @@ function game() {
     let computerScore = 0;
 
     for (let i = 0; i < 5; i++) {
+        //play through five rounds and display the score after the five rounds are over
         let playerSelection = prompt("Rock, Paper, or Scissors?");
         let computerSelection = getComputerChoice();
 
