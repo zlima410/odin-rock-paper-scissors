@@ -68,7 +68,7 @@ function game() {
         console.log("You lose the game!");
     }
     else {
-        console.log("It's a tie!");
+        console.log("You guys have tied!");
     }
 }
 
