@@ -5,12 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors | Zachary Lima</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap"
+      rel="stylesheet"
+    />
 </head>
 <body>
-    <div id="option">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
+    <div class="game-screen">
+        <section class="game-container">
+            <h1>Rock Paper Scissors</h1>
+            <div class="rps-display">
+                <div class="player-display">
+                    <div class="player-text play-score"></div>
+                </div>
+                <div class="computer-display"></div>
+            </div>
+            <div class="score-text"></div>
+            <div class="rps-select"></div>
+        </section>
     </div>
 </body>
 </html>
