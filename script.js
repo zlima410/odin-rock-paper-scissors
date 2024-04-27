@@ -47,31 +47,50 @@ function game() {
     let playerScore = 0;
     let computerScore = 0;
 
-    for (let i = 0; i < 5; i++) {
-        //play through five rounds and display the score after the five rounds are over
-        let playerSelection = prompt("Rock, Paper, or Scissors?");
-        let computerSelection = getComputerChoice();
+    let computerSelection = getComputerChoice();
 
-        let result = playRound(playerSelection, computerSelection);
+    let option = document.querySelector("#option");
+    option.addEventListener('click', (event) => {
+        let target = event.target;
 
-        if (result.includes("Win")) {
-            playerScore++;
+        switch(target.id) {
+            case 'rock':
+                let result1 = playRound("Rock", computerSelection);
+                if (result1.includes("Win"))
+                    playerScore++;
+                else if (result1.includes("Lose"))
+                    computerScore++;
+                break;
+            case 'paper':
+                let result2 = playRound("Paper", computerSelection);
+                if (result2.includes("Win")) 
+                    playerScore++;
+                else if (result2.includes("Lose")) 
+                    computerScore++;
+                break;
+            case 'scissors':
+                let result3 = playRound("Scissors", computerSelection);
+                if (result3.includes("Win"))
+                    playerScore++;
+                else if (result3.includes("Lose"))
+                    computerScore++;
+                break;
         }
-        else if (result.includes("Lose")) {
-            computerScore++;
-        }
+    });
 
-        console.log(result);
-    }
+    let results = document.createElement("div");
 
     if (playerScore > computerScore) {
-        console.log("You win the game!");
+        results.textContent = "You win the game!";
     }
     else if (playerScore < computerScore) {
-        console.log("You lose the game!");
+        results.textContent = "You lose the game...";
+    }
+    else if (playerScore === computerScore && playerScore !== 0) {
+        results.textContent = "You guys have tied."
     }
     else {
-        console.log("You guys have tied!");
+        results.textContent = "No game was played.";
     }
 }
 
