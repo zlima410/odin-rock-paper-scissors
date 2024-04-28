@@ -83,3 +83,8 @@ h5 {
 .play-select:hover {
     transform: scale(1.1);
 }
+
+.play-select-icon {
+    font-size: 50px;
+    cursor: pointer;
+}
