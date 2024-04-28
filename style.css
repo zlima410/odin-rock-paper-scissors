@@ -103,3 +103,11 @@ h5 {
     justify-content: center;
     align-items: center;
 }
+
+.play-winner {
+    color: green;
+}
+
+.play-loser {
+    color: red;
+}
