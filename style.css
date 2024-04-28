@@ -60,3 +60,14 @@ h5 {
     color: white;
     font-size: 32px;
 }
+
+.play-select {
+    height: 100px;
+    width: 100px;
+    background-color: #282828;
+    border-radius: 50%;
+    transition: all 0.1s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
