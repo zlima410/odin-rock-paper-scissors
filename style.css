@@ -30,3 +30,33 @@ body {
     display: flex;
     column-gap: 50px;
 }
+
+.player-display,
+.computer-display {
+    height: 250px;
+    width: 300px;
+    background-color: #282828;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.play-score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: black;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+h4 {
+    color: black;
+    font-size: 32px;
+}
+
+h5 {
+    color: white;
+    font-size: 32px;
+}
