@@ -106,5 +106,28 @@ selection.addEventListener("click", (e) => {
             break;
     }
 
-    
+    if (playerScore >= 5) {
+        currPlayerScore.classList.add("play-winner");
+        currComputerScore.classList.add("play-loser");
+        score.textContent = "Match Over! You Win the Game🎉";
+        currPlayerScore.textContent = playerScore;
+        currComputerScore.textContent = computerScore;
+
+        document.addEventListener("click", (e) => {
+            e.stopPropagation();
+            e.preventDefault();
+        }, true);
+    } else if (computerScore >= 5) {
+        currPlayerScore.classList.add("play-loser");
+        currComputerScore.classList.add("play-winner");
+        score.textContent = "Match Over! You Lose the Game💀";
+        currPlayerScore.textContent = playerScore;
+        currComputerScore.textContent = computerScore;
+
+        document.addEventListener("click", (e) => {
+          e.stopPropagation();
+          e.preventDefault();
+        }, true);
+    }
+    console.log(player.textContent, pc.textContent);
 });
